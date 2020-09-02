@@ -5,13 +5,13 @@
 
   <h1>Hello</h1>
   <p>{{.description}}</p>
-  <a href="theater/3333"> GO</a>
-  <a href="theater/1111"> wei</a>
 
-  <form action="/theater/create" method="get">
+  <form action="/create_room" method="get">
     映画のタイトル：<input type="text" name="movie_title" id="movie_title">
     <br>
-    動画のリンク：<input type="url" name="movie_link" id="movie_link">
+    動画のリンク：<input type="text" name="movie_link" id="movie_link">
+    <br>
+    開始時刻：<input type="text" name="start_time" id="start_time">
     <br>
     <input type="submit" value="シアター作成">
   </form>

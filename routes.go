@@ -2,10 +2,6 @@ package main
 
 func initializeRoutes() {
 	router.GET("/", showIndexPage)
-	theater := router.Group("/theater")
-	{
-		theater.GET("/create", createTheater)
-		theater.GET("/:room_num", showTheaterPage)
-	}
-
+	router.GET("/theater/:room_num", showTheaterPage)
+	router.GET("/create_room", createTheater)
 }
