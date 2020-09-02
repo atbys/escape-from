@@ -16,6 +16,18 @@ func showIndexPage(c *gin.Context) {
 	)
 }
 
+func showTheaterPage(c *gin.Context) {
+	render(c, gin.H{
+		"room_number": c.Param("room_num"),
+		"endtime":     "2020/09/02 18:00:00",
+	}, "theater.html")
+}
+
+func createTheater(c *gin.Context){
+	render(c, gin.H{
+		"title": 
+	}, "theater.html")
+}
 // Render one of HTML, JSON or CSV based on the 'Accept' header of the request
 // If the header doesn't specify this, HTML is rendered, provided that
 // the template name is present

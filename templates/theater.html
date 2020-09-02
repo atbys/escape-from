@@ -1,0 +1,8 @@
+{{ template "header.html" .}}
+
+<p>this is {{.room_number}}theater</p>
+<p id="startTime">{{.endtime}}</p>
+<div class="timer" id="timer"></div>
+<input type="button" value="reset" onclick="resetCounter();">
+<script src="/assets/js/timer.js"></script>
+{{ template "footer.html" .}}

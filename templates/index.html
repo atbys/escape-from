@@ -5,5 +5,15 @@
 
   <h1>Hello</h1>
   <p>{{.description}}</p>
+  <a href="theater/3333"> GO</a>
+  <a href="theater/1111"> wei</a>
+
+  <form action="/theater/create" method="get">
+    映画のタイトル：<input type="text" name="movie_title" id="movie_title">
+    <br>
+    動画のリンク：<input type="url" name="movie_link" id="movie_link">
+    <br>
+    <input type="submit" value="シアター作成">
+  </form>
 <!--Embed the footer.html template at this location-->
 {{ template "footer.html" .}}
