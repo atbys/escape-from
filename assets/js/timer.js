@@ -1,5 +1,6 @@
 var interval = 1000;
-var endtime = document.getElementById('startTime').innerText;
+var endtime = document.getElementById('start_time').innerText;
+console.log(endtime)
 var endDate = new Date(endtime);
 var counter = 0;
 
@@ -17,7 +18,7 @@ function countdown(period){
     insert += '<span class="h">' + addZeroDay(day) +'day' + '</span>';
     insert += '<span class="h">' + addZero(hour) + ':'+'</span>';
     insert +=  '<span class="m">' + addZero(minutes) +':' + '</span>';
-    insert += '<span class="s">' + addZero(second)+ ':'+ '</span>';
+    insert += '<span class="s">' + addZero(second) + '</span>';
     document.getElementById('timer').innerHTML = insert;
 }
 
@@ -35,6 +36,11 @@ function countup(){
     insert += '<span class="h">' + addZero(hour) + ':'+'</span>';
     insert +=  '<span class="m">' + addZero(minutes) +':' + '</span>';
     insert += '<span class="s">' + addZero(second)+ ''+ '</span>';
+    
+    insert += '<form action="/resetCounter" method="get">';
+    insert += '<input type="hidden" name="reset" value="reset">'
+    insert += '<input type="submit" value="reset">'
+    insert += '</form>'
     document.getElementById('timer').innerHTML = insert;
 }
 
